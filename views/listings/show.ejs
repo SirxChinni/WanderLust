@@ -1,0 +1,33 @@
+<% layout("/layouts/boilerplate") %>
+
+<body>
+
+<div class="show-container">
+
+    <div class="show-card">
+        <img src="<%= listing.image.url %>" class="show-img">
+
+        <div class="show-content">
+            <div class="show-title"><%= listing.title %></div>
+
+            <p class="show-desc"><%= listing.description %></p>
+
+            <div class="show-price">₹ <%= listing.price.toLocaleString("en-IN") %></div>
+
+            <p class="show-location">📍 <%= listing.location %></p>
+            <p class="show-country">🌍 <%= listing.country %></p>
+
+            <div class="show-actions">
+                <a href="/listings/<%= listing._id %>/edit" class="edit-btn"> Edit</a>
+
+                <form method="POST" action="/listings/<%= listing._id %>?_method=DELETE">
+                    <button class="delete-btn" onclick="return confirm('Are you sure?')">Delete</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

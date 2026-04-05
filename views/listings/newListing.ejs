@@ -1,0 +1,21 @@
+<%layout("/layouts/boilerplate")%>
+<body>
+
+    
+
+<div class="form-container">
+    <form action="/listings" method="POST">
+        <h2>Add New Listing</h2>
+        <input type="text" name="title" placeholder="Title" required>
+        <textarea name="description" placeholder="Description"></textarea>
+        <input type="text" name="image[url]" placeholder="Image URL">
+        <input type="number" name="price" placeholder="Price">
+        <input type="text" name="location" placeholder="Location">
+        <input type="text" name="country" placeholder="Country">
+        <button>Add</button>
+    </form>
+</div>
+
+
+</body>
+</html>

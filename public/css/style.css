@@ -1,0 +1,317 @@
+/* GLOBAL */
+.navbar{
+    height: 5rem;
+    background-color: white;
+}
+
+.fa-compass{
+    color: #fe424d;
+    font-size: 2rem;
+}
+
+.nav-link{
+    color: #222222 !important;
+}
+
+
+/* Footer*/
+
+.f-info-links a{
+    text-decoration: none;
+    color: #222222;
+}
+
+.f-info-links a:hover{
+    text-decoration: underline;
+}
+
+.f-info-links,.f-info-socials, .f-info-brand {
+    width: 100%;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.f-info-socials i{
+    font-size: 1.2rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+}
+
+.f-info{
+    text-align: center;
+    height: 8rem;
+    background-color: #ebebeb;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-evenly;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f7f7f7;
+    margin: 0;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* LINKS */
+a {
+    text-decoration: none;
+    color: #ff385c;
+    font-weight: 500;
+}
+
+/* CONTAINER */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* CARD */
+.card {
+    width: 300px;
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    border-radius: 1rem !important;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    
+}
+
+.content {
+    padding: 15px;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.desc {
+    font-size: 14px;
+    color: #555;
+}
+
+.price {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.location {
+    font-size: 14px;
+}
+
+.country {
+    font-size: 13px;
+    color: #777;
+}
+
+/* FORM */
+.form-container {
+    max-width: 34rem;
+    margin: 2rem auto;
+    background: #ffffff;
+
+    padding: 2rem;
+    border-radius: 1.2rem;
+
+    box-shadow: 0 1rem 2.5rem rgba(0,0,0,0.12);
+
+    border: 1px solid #f1f1f1;
+}
+
+.form-container input,
+.form-container textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    margin: 0.6rem 0 1rem;
+
+    border-radius: 0.6rem;
+    border: 1px solid #ddd;
+
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+}
+
+.form-container input:focus,
+.form-container textarea:focus {
+    border-color: #ff385c;
+    outline: none;
+    box-shadow: 0 0 0.4rem rgba(255,56,92,0.3);
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0 15px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #ff385c;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #e03150;
+}
+
+
+/* Remove underline + keep original styles */
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block; /* ensures full card is clickable */
+}
+
+.card-link:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* ========================= */
+/* SHOW PAGE STYLING */
+/* ========================= */
+
+.show-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.show-card {
+    width: 42rem;
+    background: #ffffff;
+
+    border-radius: 1.2rem;
+    overflow: hidden;
+
+    box-shadow: 0 1rem 2.5rem rgba(0,0,0,0.15);
+
+    margin: 0rem 2rem 2rem 2rem; /* 🔥 adds space on all sides + centers */
+}
+
+/* Image */
+.show-img {
+    width: 100%;
+    height: 24rem;
+
+    object-fit: cover;
+}
+
+/* Content */
+.show-content {
+    padding: 1.5rem 2rem;
+}
+
+/* Title */
+.show-title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+/* Description */
+.show-desc {
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+/* Price */
+.show-price {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #28a745;
+    margin-bottom: 0.8rem;
+}
+
+/* Location */
+.show-location {
+    font-size: 0.95rem;
+}
+
+/* Country */
+.show-country {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* Buttons */
+.show-actions {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+}
+
+/* Edit button */
+.edit-btn {
+    padding: 0.5rem 1rem;
+    background: #007bff;
+    color: white;
+    border-radius: 0.5rem;
+    text-decoration: none;
+}
+
+/* Delete button */
+.delete-btn {
+    padding: 0.5rem 1rem;
+    background: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+
+.listings-heading {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+
+    margin: 1.5rem 0 2rem;
+
+    color: #222;
+    position: relative;
+}
+
+/* underline effect */
+.listings-heading::after {
+    content: "";
+    display: block;
+
+    width: 4rem;
+    height: 0.25rem;
+
+    background: #ff385c;
+    margin: 0.5rem auto 0;
+
+    border-radius: 1rem;
+}
