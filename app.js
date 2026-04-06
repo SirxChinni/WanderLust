@@ -9,6 +9,8 @@ const ExpressError = require("./utils/ExpressError");
 const Joi = require('joi');
 const { listingSchema } = require("./schema");
 
+const Review = require("./models/review");
+
 
 const methodOverride = require("method-override");
 app.use(methodOverride("_method"));
@@ -138,6 +140,26 @@ app.post(
         res.redirect("/listings");
     })
 );
+
+
+//Reviews
+
+
+//POST Route
+app.post("/listings/:id/reviews", async(req,res)=>{
+    let listing = await Listing.findById(req.params.id);
+    let newReview = new Review(req.body.review);
+
+    listing.reviews.push(newReview);
+    await newReview.save();
+    await listing.save();
+
+    console.log("new review saved");
+    // res.send("Review saved");
+    res.redirect(`/listings/${listing.id}`);
+});
+
+
 
 app.get("/",(req,res)=>{
     res.render("listings/home");

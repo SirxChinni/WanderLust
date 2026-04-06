@@ -11,7 +11,7 @@ module.exports.listingSchema = Joi.object({
         }),
 
         image: Joi.object({
-            url: Joi.string().uri().allow("").optional()
+            url: Joi.string().uri().allow("", null).optional()
         }),
 
         price: Joi.number().min(0).required().messages({

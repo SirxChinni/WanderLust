@@ -12,7 +12,7 @@
 
             <p class="show-desc"><%= listing.description %></p>
 
-            <div class="show-price"> ₹ <%= listing.price ? listing.price.toLocaleString("en-IN") : "N/A" %> %></div>
+            <div class="show-price"> ₹ <%= listing.price ? listing.price.toLocaleString("en-IN") : "N/A" %></div>
 
             <p class="show-location">📍 <%= listing.location %></p>
             <p class="show-country">🌍 <%= listing.country %></p>
@@ -24,10 +24,50 @@
                     <button class="delete-btn" onclick="return confirm('Are you sure?')">Delete</button>
                 </form>
             </div>
+
         </div>
+    </div>
+    <div class="review">
+        <h4>Leave a review</h4>
+        <form action="/listings/<%= listing._id %>/reviews" method="POST" class="needs-validation" novalidate>
+            <div class="rating-row">
+    <label>Rating:</label>
+
+    <div class="star-rating">
+        <input type="radio" name="review[rating]" value="5" id="star5" required>
+        <label for="star5">★</label>
+
+        <input type="radio" name="review[rating]" value="4" id="star4" required>
+        <label for="star4">★</label>
+
+        <input type="radio" name="review[rating]" value="3" id="star3" required>
+        <label for="star3">★</label>
+
+        <input type="radio" name="review[rating]" value="2" id="star2" required>
+        <label for="star2">★</label>
+
+        <input type="radio" name="review[rating]" value="1" id="star1" required>
+        <label for="star1">★</label>
+    </div>
+    <div class="invalid-feedback" id="ratingError">
+        Please select a rating.
+    </div>
+</div>
+
+<div>
+    <label for="comment">Comments</label>
+    <textarea name="review[comment]" id="comment" class="form-control" required></textarea>
+    <div class="invalid-feedback">
+        Please enter a comment.
+    </div>
+</div>
+            <button>Submit</button>
+        </form>
     </div>
 
 </div>
+
+<script src="/js/script.js"></script>
 
 </body>
 </html>
