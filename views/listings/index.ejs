@@ -13,7 +13,9 @@
                     <div class="content">
                         <div class="title"><%= data.title %></div>
                         <div class="desc"><%= data.description %></div>
-                        <div class="price">₹ <%= data.price.toLocaleString("en-IN") %></div>
+                        <div class="price">
+                            ₹ <%= data.price ? data.price.toLocaleString("en-IN") : "N/A" %>
+                        </div>                        
                         <div class="location">📍 <%= data.location %></div>
                         <div class="country">🌍 <%= data.country %></div>
                     </div>

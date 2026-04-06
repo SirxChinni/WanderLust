@@ -12,7 +12,7 @@
 
             <p class="show-desc"><%= listing.description %></p>
 
-            <div class="show-price">₹ <%= listing.price.toLocaleString("en-IN") %></div>
+            <div class="show-price"> ₹ <%= listing.price ? listing.price.toLocaleString("en-IN") : "N/A" %> %></div>
 
             <p class="show-location">📍 <%= listing.location %></p>
             <p class="show-country">🌍 <%= listing.country %></p>

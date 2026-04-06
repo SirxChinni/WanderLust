@@ -1,19 +1,35 @@
 <%layout("/layouts/boilerplate")%>
 <body>
 
-    
-
 <div class="form-container">
-    <form action="/listings" method="POST">
-        <h2>Add New Listing</h2>
-        <input type="text" name="title" placeholder="Title" required>
-        <textarea name="description" placeholder="Description"></textarea>
-        <input type="text" name="image[url]" placeholder="Image URL">
-        <input type="number" name="price" placeholder="Price">
-        <input type="text" name="location" placeholder="Location">
-        <input type="text" name="country" placeholder="Country">
-        <button>Add</button>
-    </form>
+<form action="/listings" method="POST" class="needs-validation" novalidate>
+    <h2>Add New Listing</h2>
+
+    <!-- TITLE -->
+    <input type="text" name="title" placeholder="Title" required>
+    <div class="invalid-feedback">Please enter a title</div>
+
+    <!-- DESCRIPTION -->
+    <textarea name="description" placeholder="Description" required></textarea>
+    <div class="invalid-feedback">Description is required</div>
+
+    <!-- IMAGE -->
+    <input type="text" name="image[url]" placeholder="Image URL">
+
+    <!-- PRICE -->
+    <input type="number" name="price" placeholder="Price" required min="1">
+    <div class="invalid-feedback">Enter a valid price</div>
+
+    <!-- LOCATION -->
+    <input type="text" name="location" placeholder="Location" required>
+    <div class="invalid-feedback">Location is required</div>
+
+    <!-- COUNTRY -->
+    <input type="text" name="country" placeholder="Country" required>
+    <div class="invalid-feedback">Country is required</div>
+
+    <button>Add</button>
+</form>
 </div>
 
 

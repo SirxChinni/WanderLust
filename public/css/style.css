@@ -74,6 +74,7 @@ a {
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
+    margin-bottom: 1rem;
 }
 
 /* CARD */
@@ -128,8 +129,10 @@ a {
 
 /* FORM */
 .form-container {
-    max-width: 34rem;
-    margin: 2rem auto;
+    min-width: 50rem;
+    max-width: 50rem;
+    min-height: 40rem;
+    margin: 1rem auto;
     background: #ffffff;
 
     padding: 2rem;
@@ -138,13 +141,15 @@ a {
     box-shadow: 0 1rem 2.5rem rgba(0,0,0,0.12);
 
     border: 1px solid #f1f1f1;
+    transition: all 0.3s ease;
 }
+
 
 .form-container input,
 .form-container textarea {
     width: 100%;
     padding: 0.8rem 1rem;
-    margin: 0.6rem 0 1rem;
+    margin: 0.6rem 0 0.5rem;
 
     border-radius: 0.6rem;
     border: 1px solid #ddd;
@@ -163,7 +168,7 @@ a {
 input, textarea {
     width: 100%;
     padding: 12px;
-    margin: 10px 0 15px;
+    margin: 10px 0 10px;
     border-radius: 10px;
     border: 1px solid #ddd;
 }
@@ -174,7 +179,7 @@ button {
     background: #ff385c;
     color: white;
     border: none;
-    border-radius: 10px;
+    border-radius: 20px;
     cursor: pointer;
     font-size: 16px;
 }
@@ -314,4 +319,37 @@ button:hover {
     margin: 0.5rem auto 0;
 
     border-radius: 1rem;
+}
+
+
+/* ========================= */
+/* VALIDATION FIX (NO JUMP) */
+/* ========================= */
+
+/* Show error ONLY when JS marks invalid */
+input.is-invalid + .invalid-feedback,
+textarea.is-invalid + .invalid-feedback {
+    visibility: visible;
+}
+
+/* Hide otherwise */
+.invalid-feedback {
+    display: block;
+    min-height: 1rem;
+    font-size: 0.8rem;
+    color: red;
+    margin-top: -0.5rem;
+    margin-bottom: 0.5rem;
+    visibility: hidden;
+}
+
+/* Border styles */
+input.is-invalid,
+textarea.is-invalid {
+    border: 2px solid red;
+}
+
+input.is-valid,
+textarea.is-valid {
+    border: 2px solid green;
 }
